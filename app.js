@@ -36,7 +36,7 @@ passport.deserializeUser(User.deserializeUser())
 
      
 
-mongoose.connect("mongodb://localhost/res_blog"),{useNewUrlParser: true,useUnifiedTopology: true};
+mongoose.connect("mongodb+srv://hari:qwrt1245@hari.r24lw.mongodb.net/res_blog?retryWrites=true&w=majority"),{useNewUrlParser: true,useUnifiedTopology: true};
 mongoose.connection.once('open',function(){
     console.log("connected");
 }).on('error',function(error){
