@@ -1,0 +1,53 @@
+<%-include("../partials/header")%>
+
+<div class=" container">
+    <div class="row" style="text-align:center;;">
+    <h1>Create a new campground</h1>
+    <div style="width: 30%; margin: 0 auto;">
+    <div class="form-group">
+      <form action="/restaurants" method="POST">
+        <div class="form-group" style="padding-top: 20px;">
+        <input class="form-control" type="text" name="name" placeholder="RESTAURANT NAME">
+        </div>
+        <div class="form-group">
+        <input class="form-control" type="text" name="image" placeholder="IMAGE URL">
+        </div>
+        <div class="form-group">
+          <input class="form-control" type="text" name="dish" placeholder="best dish">
+          </div>
+          <div class="form-group">
+            <input class="form-control" type="text" name="img" placeholder="best dish IMAGE URL">
+            </div>
+          <div class="form-group">
+            <input class="form-control" type="number" name="stars" placeholder="AVERAGE STARS">
+            </div> 
+        </div>
+        <div class="form-group">
+        <input class="form-control" type="text" name="location" placeholder="LOCATION">
+        </div>
+        <div class="form-group">
+        <input class="form-control" type="text" name="drinks" placeholder="BAR AVAILABLE?">
+        </div>  
+        <div class="form-group">
+         <input class="form-control" type="text" name="takeaway" placeholder="TAKEAWAY AVAILABLE?">
+        </div>
+        <div class="form-group">
+        <input class="form-control" type="text" name="restaurant[veg]" 
+         placeholder="PURE VEG?">
+        </div>
+        <div class="form-group">
+          <input class="form-control" type="text" name="description" placeholder="ENTER DESCRIPTION">
+        </div>
+        <div class="form-group" style="padding-top: 20px;">
+          <input class="form-control" type="number" name="price" placeholder="Rs FOR TWO">
+          </div>
+        <div class="form-group">   
+        <button class="btn btn-danger btn-large">Submit</button>
+        </div>
+    </form> 
+    </div>    
+    </div>
+</div>
+
+<a href="/restaurants">go back</a>
+<%- include("../partials/footer") %>

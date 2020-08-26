@@ -1,0 +1,56 @@
+<%- include("../partials/header")%>
+
+<div class="container">
+    <header class="jumbotron" style="background-color: rgb(146, 161, 194);">
+        <div class="container">
+        <h1 style="text-transform: uppercase;">Welcome to forked_in</h1>
+        <p>VIEW,COMMENT,RATE OR JUST ENJOY OUR SITE :) </p>
+        <%if(curentuser){%>
+            <a href="/restaurants/new" class="btn btn-primary btn-large">ADD NEW RESTOS
+            </a>      
+        <%}%>
+        </div>
+    </header>
+</div>
+
+<div class="container" style="width: 60%;">
+    <div class="row text-center" style="display: flex; flex-wrap: wrap;" >  
+            <div class="col-md-12 col-sm-12 search-bar">
+                <div class="col-md-2 col-sm-2" > 
+                    <span class="srch" id="btn" ><i class="fa fa-search"  aria-hidden="true" ></i></span>
+                </div>
+                <div class="col-md-10 col-xs-10">
+                    <form action="/restaurants" method="GET">
+                        <input  name="search" id="find" type="text"  placeholder="Find your resto">
+                        <span class="search" >
+                            <label for="resto" ></label>
+                            <select name="resto">
+                                <option value="none">select</option>
+                                <option value="name" class="" >NAME</option>
+                                <option value="location">LOCATION</option>
+                            </select>
+                        </span>
+                        
+            
+                        </form>
+                </div>              
+            </div> 
+       
+        <%restaurant.forEach(function(rest){%>
+            
+            <div class="col-md-12 col-sm-12" >
+                <div class="thumbnail" style="background-color:#eeb5b5;border:0" >
+                    <img src="<%=rest.image%>" width="80%"></img>
+                  <div class="caption">
+                <h2><a href="/restaurants/<%=rest._id%>" style="color: red;text-transform: uppercase;" ><b><%=rest.name%></b></a></h2> 
+                       <h4 style="color:rgb(16, 15, 19);"><%=rest.location%></h4>
+                       <hr>
+                    </div>
+                </div>
+            </div>        
+        <% });%>
+        
+    </div>
+</div>
+
+<%- include("../partials/footer")%>

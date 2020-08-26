@@ -1,0 +1,135 @@
+<%-include("../partials/header")%>
+
+<div class="container" style="width: 75%;">
+    <div class="row">
+        <div class="col-md-4">    
+            <div class="list group">
+                <li class="list-group-item">BEST DISH: <strong><%=rest.dish.toUpperCase()%></strong> </li>
+                <li class="list-group-item"><img src="<%=rest.img%>"  style="width:100%;" ></li>
+                <li class="list-group-item" id="starrd">FORKEd_IN RATING: <strong><%= rest.stars%></strong>
+                <%if(rest.stars<=0.5){%>
+                    <span style="display:inline;"><i class="fa fa-star-half" aria-hidden="true"></i></span>
+                <%}else if(rest.stars>0.5 && rest.stars<=1){%>
+                    <span style="display:inline;"><i class="fa fa-star" aria-hidden="true"></i></span>
+                <%}else if(rest.stars>1 && rest.stars<=1.5){%>
+                    <span style="display:inline;"><i class="fa fa-star" aria-hidden="true"></i></span>
+                    <span style="display:inline;"><i class="fa fa-star-half" aria-hidden="true"></i></span>
+                <%}else if(rest.stars>1.5 && rest.stars<=2){%>
+                    <span style="display:inline;"><i class="fa fa-star" aria-hidden="true"></i></span>
+                    <span style="display:inline;"><i class="fa fa-star" aria-hidden="true"></i></span>
+                <%}else if(rest.stars>2 && rest.stars<=2.5){%>
+                    <span style="display:inline;"><i class="fa fa-star" aria-hidden="true"></i></span>
+                    <span style="display:inline;"><i class="fa fa-star" aria-hidden="true"></i></span>
+                    <span style="display:inline;"><i class="fa fa-star-half" aria-hidden="true"></i></span>
+                <%}else if(rest.stars>2.5 && rest.stars<=3){%>
+                    <span style="display:inline;"><i class="fa fa-star" aria-hidden="true"></i></span>
+                    <span style="display:inline;"><i class="fa fa-star" aria-hidden="true"></i></span>
+                    <span style="display:inline;"><i class="fa fa-star" aria-hidden="true"></i></span>        
+                <%}else if(rest.stars>3 && rest.stars<=3.5){%>
+                    <span style="display:inline;"><i class="fa fa-star" aria-hidden="true"></i></span>
+                    <span style="display:inline;"><i class="fa fa-star" aria-hidden="true"></i></span>
+                    <span style="display:inline;"><i class="fa fa-star" aria-hidden="true"></i></span>
+                    <span style="display:inline;"><i class="fa fa-star-half" aria-hidden="true"></i></span>
+                <%}else if(rest.stars>3.5 && rest.stars<=4){%>
+                    <span style="display:inline;"><i class="fa fa-star" aria-hidden="true"></i></span>
+                    <span style="display:inline;"><i class="fa fa-star" aria-hidden="true"></i></span>
+                    <span style="display:inline;"><i class="fa fa-star" aria-hidden="true"></i></span>
+                    <span style="display:inline;"><i class="fa fa-star" aria-hidden="true"></i></span>
+                <%}else if(rest.stars>4 && rest.stars<=4.5){%>
+                    <span style="display:inline;"><i class="fa fa-star" aria-hidden="true"></i></span>
+                    <span style="display:inline;"><i class="fa fa-star" aria-hidden="true"></i></span>
+                    <span style="display:inline;"><i class="fa fa-star" aria-hidden="true"></i></span>
+                    <span style="display:inline;"><i class="fa fa-star" aria-hidden="true"></i></span>
+                    <span style="display:inline;"><i class="fa fa-star-half" aria-hidden="true"></i></span>    
+                <%}else if(rest.stars>4 && rest.stars<=4.5){%>
+                    <span style="display:inline;"><i class="fa fa-star" aria-hidden="true"></i></span>
+                    <span style="display:inline;"><i class="fa fa-star" aria-hidden="true"></i></span>
+                    <span style="display:inline;"><i class="fa fa-star" aria-hidden="true"></i></span>
+                    <span style="display:inline;"><i class="fa fa-star" aria-hidden="true"></i></span>
+                    <span style="display:inline;"><i class="fa fa-star" aria-hidden="true"></i></span>
+                <%}%>
+                </li>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="thumbnail" >
+                <img class="img-responsive" src="<%=rest.image%>" width="100%" style="padding-bottom: 2em;" >
+                <div style="margin-left: 2em;">
+                <div class="caption-full">
+                    <p style="font-size: xx-large;font-weight: bolder;"><%=rest.name.toUpperCase()%></p>
+                </div>
+                <div style="display:inline-flex;">
+                    <span><p  style="font-weight: 600;font-size: medium;margin-right: 1em;"><i class="fa fa-inr" aria-hidden="true"></i>  <%=rest.price%> for two</p>   
+                    </span>  
+                    <%if(rest.drinks=="YES% " || rest.drinks=="yes"){ %>
+                        <span><p  style="font-weight: 600;font-size: medium;margin-right: 1em;"><i class="fa fa-glass" aria-hidden="true"></i> AVAILABLE</p>   
+                        </span>
+                    <%}else{ %>
+                        <span><p  style="font-weight: 600;font-size: medium;margin-right: 1em;"><i class="fa fa-glass" aria-hidden="true" style="opacity: 0.2;"></i> NOT AVAILABLE</p>   
+                        </span>
+                    <%} %>   
+                    <%if(rest.veg=="YES% " || rest.veg=="yes"){ %>
+                        <span><p  style="font-weight: 600;font-size: medium;margin-right: 1em;"><i class="fa fa-leaf" aria-hidden="true" style="color: green;"></i>
+                            PURE VEG.</p>   
+                        </span>
+                    <%}else{ %>
+                        <span><p  style="font-weight: 600;font-size: medium;margin-right: 1em;"><i class="fa fa-leaf" aria-hidden="true" style="color: red;"></i>
+                            NON. VEG.</p>   
+                        </span>
+                    <%} %>   
+                </div>
+                </div>
+                <div>
+                    <%if(curentuser && curentuser.username=="admin"){%>
+                    <a style="margin-left: 2em;" href="/restaurants/<%=rest._id%>/edit" class="btn btn-warning">edit</a>
+                    <form class="delte" action="/restaurants/<%=rest._id%>?_method=DELETE" method="POST">
+                        <button class="btn btn-danger" style="margin-left: 2em">Delete</button>
+                    </form>
+                <%}%>
+                </div>
+                </div>
+            </div>
+            </div>
+            <div class="well">
+                <div style="font-size: larger;font-weight: 600;">
+                    <p><%=rest.description%></p> 
+                 </div>
+            </div>
+            <div class="well">
+                <a href="/restaurants/<%=rest._id%>/comments/new" class="btn btn-primary" style="margin-left:1em ;">add a review</a>
+                <div >
+                    <%rest.comments.forEach(function(comment){%>
+                        <div class="well" >
+                            <p class="pull-right"><%=date%></p>
+                            <strong><p style="color: red;"><%=comment.author.username%></p></strong>
+                            <p><%=comment.text%></p>
+                            <div style="display: inline;font-weight: bolder;">
+                                <span class="abc">Ambience:<p><%=comment.ambience%></p></span>
+                                <span class="abc">Food:<p><%=comment.food%></p></span>
+                                <span class="abc">Service:<p><%=comment.service%></p></span>
+                                <span class="abc">Value for money:<p><%=comment.valueformoney%></p></span>
+                                <div>
+                                    <span style="color: darkred;font-size: medium;font-weight: 800;">Average rating:<%=comment.average%></span>
+                                </div>
+                                <div style="display:inline;"><img src="<%=comment.img%>" style="max-width: 100%;"></div>
+                                
+                            </div>
+                        <div>  
+                            <%if(curentuser && (comment.author.id.equals(curentuser._id))){%>
+                    <a class="pull-left btn btn-xs btn-warning" href="/restaurants/<%=rest._id%>/comments/<%=comment._id%>/edit">Edit</a>
+                    <form class="delte" action="/restaurants/<%=rest._id%>/comments/<%=comment._id%>?_method=DELETE" method="POST">
+                    <button class="pull-right btn btn-xs btn-danger">Delete</button>
+                    </form>
+                <%}%>
+                </div>
+                     </div>
+                    <%})%>
+                
+                </div>                
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<%-include("../partials/footer")%>

@@ -1,0 +1,39 @@
+<%- include("../partials/header") %>
+<div class="box">
+    <h1 style="margin: 1.5em 0;">SIGN UP!</h1>
+    <form action="/register" method="POST">    
+        <div class="login">
+            <i class="fa fa-envelope-o" aria-hidden="true" style="margin-right: 0.8em;"></i><input type="text" name="username" placeholder="username"   required style="background-color:#eeb5b5;height: 2em;font-size: medium;">
+        </div>
+        <div class="login">
+            <i class="fa fa-lock" aria-hidden="true" style="margin-right: 0.8em;"></i>
+           <input type="password" name="password" id="pass" placeholder="password" required style="background-color:#eeb5b5;height: 2em;font-size: medium;">
+           <span class="eye" onclick="myfunction()">
+            <i id="hide1" class="fa fa-eye" aria-hidden="true"></i>
+            <i id="hide2" class="fa fa-eye-slash" aria-hidden="true"></i>
+           </span>
+        </div>
+        <div>
+            <button style="width:50%;display:block;outline:none; margin:40px auto 20px;border:none;background-color: crimson;font-weight: bolder;color: whitesmoke;">SIGN UP</button>
+        </div>
+        </form>
+</div>
+
+<script>
+    function myfunction(){
+        var x= document.getElementById("pass");
+        var y= document.getElementById("hide1");
+        var z= document.getElementById("hide2");
+        if(x.type === "password"){
+            x.type="text";
+            y.style.display="block";
+            z.style.display="none"
+        }else{
+            x.type="password";
+            y.style.display="none";
+            z.style.display="block"
+        }
+    }
+</script>
+
+<%- include("../partials/footer") %>

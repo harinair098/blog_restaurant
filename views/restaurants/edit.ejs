@@ -1,0 +1,56 @@
+<%- include("../partials/header") %>
+
+<div class=" container">
+    <div class="row" style="text-align:center;">
+    <h1>Create a new campground</h1>
+    <div style="width: 30%; margin: 0 auto;">
+    <div class="form-group">
+      <form action="/restaurants/<%=rest._id%>?_method=PUT" method="POST">
+        <div class="form-group" style="padding-top: 20px;">
+        <input class="form-control" type="text" name="restaurant[name]"
+        value="<%=rest.name%>" placeholder="RESTAURANT NAME">
+        </div>
+        <div class="form-group">
+        <input class="form-control" type="text" name="restaurant[image]" value="<%=rest.image%>"placeholder="IMAGE URL">
+        </div>
+        <div class="form-group">
+          <input class="form-control" type="text" name="restaurant[dish]" placeholder="best dish">
+          </div>
+          <div class="form-group">
+            <input class="form-control" type="text" name="restaurant[img]" value="<%=rest.img%>"placeholder="best dish IMAGE URL">
+            </div>
+          <div class="form-group">
+            <input class="form-control" type="number" name="restaurant[stars]" placeholder="AVERAGE STARS" min="0.5" max="5" step="0.1">
+            </div> 
+        <div class="form-group">
+        <input class="form-control" type="text" name="restaurant[location]" value="<%=rest.location%>"placeholder="LOCATION">
+        </div>
+        <div class="form-group">
+        <input class="form-control" type="text" name="restaurant[drinks]" value="<%=rest.drinks%>"placeholder="BAR AVAILABLE?">
+        </div>  
+        <div class="form-group">
+         <input class="form-control" type="text" name="restaurant[takeaway]" 
+         value="<%=rest.takeaway%>" placeholder="TAKEAWAY AVAILABLE?">
+        </div>
+        <div class="form-group">
+         <input class="form-control" type="text" name="restaurant[veg]" 
+        value="<%=rest.veg%>" placeholder="PURE VEG?">
+       </div>
+        <div class="form-group">
+          <input class="form-control" type="text" name="restaurant[description]" 
+          value="<%=rest.description%>" placeholder="ENTER DESCRIPTION">
+        </div>
+        <div class="form-group" style="padding-top: 20px;">
+          <input class="form-control" type="number" name="restaurant[price]" 
+          value="<%=rest.price%>" placeholder="Rs FOR TWO">
+          </div>
+        <div class="form-group">   
+        <button class="btn btn-danger btn-large">Submit</button>
+        </div>
+    </form> 
+    </div>    
+    </div>
+</div>
+
+<a href="/restaurants/<%=rest._id%>">go back</a>
+<%- include("../partials/footer") %>

@@ -1,0 +1,35 @@
+<%- include("../partials/header")%>
+
+<div class=" container">
+    <div class="row" style="text-align:center;;">
+    <h1>Edit review </h1>
+    <div style="width: 30%; margin: 0 auto;">
+    <div class="form-group">
+      <form action="/restaurants/<%=rest_id%>/comments/<%=comment._id%>?_method=PUT" method="POST">
+        <div class="form-group" style="padding-top: 10px;"><p style="text-align: left;">REVIEW
+        <input type="text" class="form-control" height="20%" name="comment[text]" value="<%=comment.text%>" required >
+        </p>
+        </div>
+        <div class="form-group" style="padding-top: 10px;"><p style="text-align: left;">Ambience
+        <input class="form-control" type="number" name="comment[ambience]" value="<%=comment.ambience%>" min="0.5" max="5" step="0.1" required></p>
+        </div>
+        <div class="form-group" style="padding-top: 10px;"><p style="text-align: left;">Food
+        <input class="form-control" type="number" name="comment[food]" value="<%=comment.food%>" min="0.5" max="5" step="0.1" required></p>
+        </div>
+        <div class="form-group" style="padding-top: 10px;"><p style="text-align: left;">Service
+        <input class="form-control" type="number" name="comment[service]" value="<%=comment.service%>" min="0.5" max="5" step="0.1" required></p>
+        </div>
+        <div class="form-group" style="padding-top: 10px;"><p style="text-align: left;">Value for money
+        <input class="form-control" type="number" name="comment[valueformoney]" value="<%=comment.valueformoney%>" min="0.5" max="5" step="0.1" required></p>
+        </div>
+        <div class="form-group" style="padding-top: 10px;"><p style="text-align: left;">Image
+        <input class="form-control" type="text" name="comment[img]" value="<%=comment.img%>"></p>
+        </div>
+        <div class="form-group">   
+        <button class="btn btn-danger btn-large">Submit</button>
+        </div>
+    </form> 
+    </div>    
+    </div>
+
+<%- include("../partials/footer")%>
