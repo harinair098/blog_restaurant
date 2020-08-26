@@ -1,9 +1,13 @@
 body{
-    background-color:#eeb5b5;
+    /* background-color:#eeb5b5; */
+    background-color:#e6c229ff ;
+    color:rgb(146, 55, 77);
     font-family:'oxygen';
 
 }
-
+/* 146, 55, 77
+jonquil: #e6c229ff;
+4da1a9ff */
 .abc{
     color: firebrick;
     padding-right: 5px;
@@ -107,7 +111,6 @@ text-align: center;
     
     background-color: transparent;  
     border: transparent;
-    margin-right:;
     padding-right: 0px;
     outline: none;
     color: rgb(109, 42, 42);

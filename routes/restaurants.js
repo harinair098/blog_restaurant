@@ -4,6 +4,7 @@ var Comment=require("../models/comments")
 var Restaurant=require("../models/restaurant")
 
 router.get("/restaurants",function(req,res){
+    console.log(req.query.search)
     if(req.query.search){
         const regex=new RegExp(escapeRegex(req.query.search),'gi');
         if(req.query.resto==='none'){
