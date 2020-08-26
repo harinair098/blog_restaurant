@@ -63,7 +63,7 @@ app.use(restaurantroutes);
 app.use(commentroutes);
 
 
-app.listen(3000,function(){
+app.listen(process.env.PORT || 3000,function(){
     console.log("connection established")
 })
 
