@@ -3,7 +3,7 @@
 <div class="container">
     <header class="jumbotron" style="background-color: rgb(146, 161, 194);">
         <div class="container">
-        <h1 style="text-transform: uppercase;">Welcome to forked_in</h1>
+        <h1 >WELCOME TO FORKEd_IN</h1>
         <p>VIEW,COMMENT,RATE OR JUST ENJOY OUR SITE :) </p>
         <%if(curentuser){%>
             <a href="/restaurants/new" class="btn btn-primary btn-large" >ADD NEW RESTOS
@@ -17,12 +17,12 @@
     <div class="row text-center" style="display: flex; flex-wrap: wrap;" >  
             <div class="col-md-12 col-sm-12 search-bar">
                 <div class="col-md-2 col-sm-2" > 
-                    <span class="srch" id="btn" ><i class="fa fa-search"  aria-hidden="true" ></i></span>
+                    <span class="srch" ><i class="fa fa-search"  aria-hidden="true" ></i></span>
                 </div>
                 <div class="col-md-10 col-xs-10">
                     <form action="/restaurants" method="GET">
-                        <input  name="search" id="find" type="text"  placeholder="Find your resto">
-                        <input type="submit" style="display:none">
+                        <input  name="search" id="find" type="text"  placeholder="Find your resto" onkeyup="func()">
+                        <input type="submit" id="btn" style="display:none">
                         <span class="search" >
                             <label for="resto" ></label>
                             <select name="resto">
@@ -50,5 +50,18 @@
         
     </div>
 </div>
+<script type="text/javascript">
+function func(){
+    const found=document.getElementById("find")
+    const button=document.getElementById("btn")
+    button.click();
+    console.log(found.value)
+}
+    
+    // found.on("keypress",function(){
+    //     console.log(found);
+    // });
+</script>
+
 
 <%- include("../partials/footer")%>

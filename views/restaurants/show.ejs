@@ -96,12 +96,12 @@
                  </div>
             </div>
             <div class="well">
-                <a href="/restaurants/<%=rest._id%>/comments/new" class="btn btn-primary" style="margin-left:1em ;">add a review</a>
+                <a href="/restaurants/<%=rest._id%>/comments/new" class="btn btn-primary" style="margin-left:1em ;background-color: #4da1a9ff;">add a review</a>
                 <div >
                     <%rest.comments.forEach(function(comment){%>
                         <div class="well" >
                             <p class="pull-right"><%=date%></p>
-                            <strong><p style="color: red;"><%=comment.author.username%></p></strong>
+                            <strong><p style="color:rgb(73, 112, 197);font-size:medium;"><%=comment.author.username%></p></strong>
                             <p><%=comment.text%></p>
                             <div style="display: inline;font-weight: bolder;">
                                 <span class="abc">Ambience:<p><%=comment.ambience%></p></span>
@@ -109,9 +109,9 @@
                                 <span class="abc">Service:<p><%=comment.service%></p></span>
                                 <span class="abc">Value for money:<p><%=comment.valueformoney%></p></span>
                                 <div>
-                                    <span style="color: darkred;font-size: medium;font-weight: 800;">Average rating:<%=comment.average%></span>
+                                    <span style="color: darkred;font-size: medium;font-weight: 800;">Overoll rating:<%=comment.average%></span>
                                 </div>
-                                <div style="display:inline;"><img src="<%=comment.img%>" style="max-width: 100%;"></div>
+                                <div style="display:inline;"><img src="<%=comment.img%>" style="max-width: 30%;"></div>
                                 
                             </div>
                         <div>  

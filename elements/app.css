@@ -107,6 +107,11 @@ text-align: center;
     margin-top: 5px;
     color:red
 }
+.search select option{
+    background-color:khaki;
+    transition: cubic-bezier(1, 0, 0, 1);
+    animation-delay:2s ;
+}
 .search select{
     
     background-color: transparent;  
