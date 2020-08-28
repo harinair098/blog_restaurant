@@ -45,27 +45,27 @@ p,button{
     background-repeat: no-repeat;
     opacity: 0;
     z-index: 0;
-    animation: imageAnimation 35s linear infinite;
+    animation: imageAnimation 25s linear infinite;
 }
 .slideshow li:nth-child(1){
     background-image:url(https://images.unsplash.com/photo-1527224538127-2104bb71c51b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80) ;
 
 }
 .slideshow li:nth-child(2){
-    background-image:url(https://1.bp.blogspot.com/-K5fYbn-oWUY/V_Pl5lU9e2I/AAAAAAAANXI/zNG6ObLxbGsLJCBR8yldr-rS53ITksSjQCK4B/s1600/bread-counter-oktobrunch-alfresco-the-eatery-four-points-by-sheraton-viman-nagar-pune.JPG) ;
-    animation-delay: 7s
+    background-image: url(https://images.pexels.com/photos/326279/pexels-photo-326279.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);
+    animation-delay: 5s
 }
 .slideshow li:nth-child(3){
     background-image:url(https://www.indiaeve.com/images/events/Event555292318Img.jpg) ;
-    animation-delay: 14s;
+    animation-delay: 10s;
 }
 .slideshow li:nth-child(4){
     background-image:url(https://www.cghearth.com/uploads/DiningImages/20170325071853AMterrace-grillcrop1.jpg) ;
-    animation-delay: 21s;
+    animation-delay: 15s;
 }
 .slideshow li:nth-child(5){
-    background-image: url(https://www.thehindu.com/life-and-style/food/surefk/article31849586.ece/alternates/FREE_435/1MPPAROTTA);
-    animation-delay: 28s;
+    background-image: url(https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);
+    animation-delay: 20s;
 }
 
 @keyframes imageAnimation{
