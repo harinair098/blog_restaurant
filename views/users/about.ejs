@@ -1,5 +1,5 @@
 <%- include("../partials/header")%>
-<div class="container">
+<!-- <div class="container">
   <div class="jumbotron">
       <h1> <i class="fa fa-cutlery" aria-hidden="true" ></i> FORKEd_IN</h1>
   </div>
@@ -26,6 +26,62 @@
                 HARi,Founder</p>
         </div>
     </div>
+</div> -->
+<div class="container jumbotron">
+    <h1>Feedback</h1>
 </div>
+    <%if(value === 0){%>
+        <div class="container row thumbnail" style="margin: auto;">
+            <div style="margin:2em;"> 
+                <h3>We want the website to be as friendly as possible and we would like to take few minutes so that you could share your experience in using this website</h3>
+            <p>
+                <h3>If you are new to this site, take a quick tour and then come back to this page :)</h3>
+            </p>
+        <form action="/feedback" method="POST">
+            <p>
+                <p>
+               <h3>--> how did you like our landing page?</h3> 
+                </p>
+                <p style="font-size: large;letter-spacing: 1px;">
+                    <input type="radio" name="feedback[quest1]" value="opt1" required>
+                    <label for="q1">Liked it!</label><br>
+                    <input type="radio" name="feedback[quest1]" value="opt2" required>
+                    <label for="q1">Yikes!</label><br>
+                    <input type="radio" name="feedback[quest1]" value="opt3" required>
+                    <label for="q1">Scope for improvement</label>
+                </p>
+            </p>
+            <p>
+                <p>
+                    <h3>-->What about the overall design and functionality?</h3>
+                </p>
+                <p style="font-size: large;letter-spacing: 1px;">
+                    <input type="radio" name="feedback[quest2]" value="opt1" required>
+                    <label for="q1">Liked it!</label><br>
+                    <input type="radio" name="feedback[quest2]" value="opt2" required>
+                    <label for="q1">Yikes!</label><br>
+                    <input type="radio" name="feedback[quest2]" value="opt3" required>
+                    <label for="q2">Scope for improvement</label>
+                </p>
+            </p>
+            <p >
+            <h3>-->Feel free to share your reviews about the site; mention the things you liked or other feature you wished was there.</h3> 
+            <textarea name="feedback[quest3]" style="width: 50%;font-size: large;letter-spacing: 1px;" required></textarea>
+            </p>
+        <input type="submit" >
+    </form>
+        </div>
+    </div>
+    <%}else{%>
+            <div class="container row thumbnail" style="margin: auto;">
+                <div style="margin:2em;"> 
+                    <p style="font-size:xx-large;font-weight: 700;"><i class="fa fa-meh-o" aria-hidden="true"></i>  OOPS!!!</p>
+                <p>
+                    <h3>IT SEEMS THAT YOU HAVE ALREADY SUBMITTED THE FEEDBACK.</h3>
+                    <h3>YOU CAN SUBMIT ANOTHER FEEDBACK AFTER A FEATURE HAS BEEN ADDED TO THE SITE..TILL THEN ENJOY :)</h3>
+                </p>
+                </div>
+                </div> -->
+            <%}%>
 
 <%- include("../partials/footer")%>

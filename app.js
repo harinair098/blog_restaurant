@@ -5,6 +5,7 @@ bodyparser      =  require("body-parser"),
 Restaurant      =  require("./models/restaurant"),
 Comment         =  require("./models/comments"),
 User            =  require("./models/users") ,
+feedback        =  require("./models/feedback") ,
 passport        =  require("passport"),
 flash           =  require("connect-flash")
 localstrategy   =  require("passport-local"),
@@ -46,6 +47,7 @@ app.set("view engine","ejs")
 app.use(bodyparser.urlencoded({extended:true}));
 app.use(function(req,res,next){
     res.locals.curentuser=req.user;
+    res.locals.feed=req.feedback;
     res.locals.date=date;
     res.locals.error=req.flash("error");
     res.locals.success=req.flash("success");
