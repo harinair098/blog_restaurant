@@ -11,13 +11,12 @@ router.get("/",function(req,res){
 ////////FEEDBACK//////////
 router.get("/feedback",isloggedin,function(req,res){
     Feedback.find({"author.username":req.user.username},function(err,result){
-        result.allow=true;
-       if(Object.keys(result).length === 0 || result.allow){
+       if(Object.keys(result).length === 0){
            value=0
-        res.render("users/about",{value:value})
+        res.render("users/feedback",{value:value})
        }else{
            value=1;
-           res.render("users/about",{value:value})
+           res.render("users/feedback",{value:value})
         }   
        console.log(Object.keys(result).length)
        console.log(value)

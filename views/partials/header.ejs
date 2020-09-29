@@ -27,10 +27,10 @@
                 </div>
                  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                      <ul class="nav navbar-nav navbar-right">
-                        <li><a href="/feedback" style="font-size:larger;margin-top: 5px;">Feedback</a> </li>    
+                        <li><a href="/feedback" style="font-size:medium;margin-top: 5px;">Feedback</a> </li>    
                         <li> <a href="/restaurants"><i class="fa fa-home" aria-hidden="true" style="font-size: x-large;"></i></i></a></li>
                          <%if(!curentuser){%> 
-                           <li><a href="/login"><i class="fa fa-user" aria-hidden="true" style="font-size: x-large;"></i></a> </li>              
+                             <li><a href="/login"><i class="fa fa-user" aria-hidden="true" style="font-size: x-large;"></i></a> </li>              
                            <li><a href="/register"><i class="fa fa-user-plus" aria-hidden="true" style="font-size: x-large;"></i></a> </li>
                          <%}else{%> 
                             <li><a style="color: red;font-size:medium;margin-top: 5px;"><%=curentuser.username%></a></li>> 
