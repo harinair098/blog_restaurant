@@ -1,11 +1,11 @@
 <%- include("../partials/header")%>
 
 <div class="container">
-    <header class="jumbotron" style="background-color: rgb(146, 161, 194);">
+    <header class="jumbotron" style="background-color:rgb(210,220,220);">
         <div class="container">
         <h1 >WELCOME TO FORKEd_IN</h1>
         <p>VIEW,COMMENT,RATE OR JUST ENJOY OUR SITE :) </p>
-        <%if(curentuser){%>
+        <%if(curentuser==='admin'){%>
             <a href="/restaurants/new" class="btn btn-primary btn-large" >ADD NEW RESTOS
             </a>      
         <%}%>
@@ -37,12 +37,12 @@
         <%restaurant.forEach(function(rest){%>
             
             <div class="col-md-12 col-sm-12" >
-                <div class="thumbnail" style="background-color:#e6c229ff;border:0" >
+                <div class="thumbnail" style="background-color:seashell;border:0" >
                     <img src="<%=rest.image%>" width="80%"></img>
                   <div class="caption">
                 <h2><a href="/restaurants/<%=rest._id%>" style="color: red;text-transform: uppercase;" ><b><%=rest.name%></b></a></h2> 
                        <h4 style="color:rgb(16, 15, 19);"><%=rest.location%></h4>
-                       <hr>
+                    
                     </div>
                 </div>
             </div>        

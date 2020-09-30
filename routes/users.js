@@ -11,7 +11,8 @@ router.get("/",function(req,res){
 ////////FEEDBACK//////////
 router.get("/feedback",isloggedin,function(req,res){
     Feedback.find({"author.username":req.user.username},function(err,result){
-       if(Object.keys(result).length === 0){
+        result.allow=false
+       if(Object.keys(result).length === 0 || result.allow ){
            value=0
         res.render("users/feedback",{value:value})
        }else{

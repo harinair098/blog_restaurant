@@ -65,7 +65,7 @@
                         <span><p  style="font-weight: 600;font-size: medium;margin-right: 1em;"><i class="fa fa-glass" aria-hidden="true"></i> AVAILABLE</p>   
                         </span>
                     <%}else{ %>
-                        <span><p  style="font-weight: 600;font-size: medium;margin-right: 1em;"><i class="fa fa-glass" aria-hidden="true" style="opacity: 0.2;"></i> NOT AVAILABLE</p>   
+                        <span><p  style="font-weight: 600;font-size: medium;margin-right: 1em;"><i class="fa fa-glass" aria-hidden="true" style="opacity: 0.38;"></i> NOT AVAILABLE</p>   
                         </span>
                     <%} %>   
                     <%if(rest.veg=="YES% " || rest.veg=="yes"){ %>
@@ -91,7 +91,8 @@
             </div>
             </div>
             <div class="well">
-                <div style="font-size: larger;font-weight: 600;">
+                <div style="font-size:small;font-weight: 600;">
+
                     <p><%=rest.description%></p> 
                  </div>
             </div>
@@ -104,12 +105,12 @@
                             <strong><p style="color:rgb(73, 112, 197);font-size:medium;"><%=comment.author.username%></p></strong>
                             <p><%=comment.text%></p>
                             <div style="display: inline;font-weight: bolder;">
-                                <span class="abc">Ambience:<p><%=comment.ambience%></p></span>
-                                <span class="abc">Food:<p><%=comment.food%></p></span>
-                                <span class="abc">Service:<p><%=comment.service%></p></span>
-                                <span class="abc">Value for money:<p><%=comment.valueformoney%></p></span>
-                                <div>
-                                    <span style="color: darkred;font-size: medium;font-weight: 800;">Overoll rating:<%=comment.average%></span>
+                                <span class="abc">Ambience:<p> <%=comment.ambience%> </p></span>
+                                <span class="abc">Food:<p> <%=comment.food%> </p></span>
+                                <span class="abc">Service:<p> <%=comment.service%> </p></span>
+                                <span class="abc">Value for money:<p> <%=comment.valueformoney%> </p></span>
+                                <div style="padding-top: 1em;">
+                                    <span style="color: darkred;font-size: medium;font-weight: 800;"><%= comment.author.username %> gives: <%=comment.average%></span>
                                 </div>
                                 <div style="display:inline;"><img src="<%=comment.img%>" style="max-width: 30%;"></div>
                                 
@@ -124,6 +125,7 @@
                 </div>
                      </div>
                     <%})%>
+                    
                 
                 </div>                
             </div>

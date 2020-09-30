@@ -9,7 +9,7 @@ body{
 jonquil: #e6c229ff;
 4da1a9ff */
 .abc{
-    color: firebrick;
+    color: darkred;
     padding-right: 5px;
     padding-top: 15px;
 
@@ -71,7 +71,7 @@ text-align: center;
     outline: transparent;
     margin-bottom: 2em;
     height: 40px;
-    background-color: khaki;
+    background-color:seashell;
     font-size: large;
     border-radius: 2em;
 }
@@ -108,7 +108,7 @@ text-align: center;
     color:red
 }
 .search select option{
-    background-color:khaki;
+    background-color:transparent;
     transition: cubic-bezier(1, 0, 0, 1);
     animation-delay:2s ;
 }
