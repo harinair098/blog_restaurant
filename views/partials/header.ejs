@@ -47,14 +47,17 @@
             </div>
         </nav>
         <%if(error && error.length>0){%>
-            <div class=" pattern" >
-            <div class="alert alert-danger pattern" role="alert">
-                <%=error%>
+            <div class=" pattern " id="error" >
+            <div class="alert alert-danger pattern"  style="margin: 0; border: none;"  role="alert">
+               
+                <h4 style="background-color: red;width:max-content;margin: auto; text-align: center; border-radius: 0.3em;color: white;font-weight: bold;">
+                    <%=error%>
+                </h4>
             </div>
             </div>
         <%}%>
         <%if(success && success.length>0){%>
-            <div class=" pattern">
+            <div class=" pattern " id="success">
                 <div class="alert alert-success pattern" style="margin: 0; border: none;" role="alert">
                     <h4 style="background-color: green;width:max-content;margin: auto; text-align: center; border-radius: 0.3em;color: white;">
                         <%=success%>
@@ -63,3 +66,8 @@
                 </div>
                 </div>
                 <%}%>
+
+                <script type="text/javascript">
+                window.setTimeout("document.getElementById('success').style.display='none';", 3500); 
+                window.setTimeout("document.getElementById('error').style.display='none';", 3500); 
+                </script>
