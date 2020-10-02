@@ -7,25 +7,10 @@ jonquil: #e6c229ff;
     padding-top: 15px;
 
 }
-/* #menu ul li.selected {
-    background: #910000;
-    color:#FFFFFF;
+
+body{
+    background-color: #B7D1DA;
 }
-#menu ul {
-    margin: 0;
-    padding: 25px 0 0 20px;
-    list-style: none;
-    line-height: normal;
-}
-#menu a:hover {
-    text-decoration: underline;
-    background: #910000;
-    color:#FFFFFF;
-}
-#menu a:active {
-    background: #910000;
-    color:black;
-} */
 .abc p{
     
     color:black;
@@ -89,8 +74,9 @@ text-align: center;
     margin-bottom: 2em;
     height: 10%;
     text-align: center;
-    background-color:#898989;
+    background-color:transparent;
     font-size: large;
+    box-shadow: 5px 8px #697268;
     border-radius: 2em;
 }
 .search-bar input{
@@ -102,7 +88,7 @@ text-align: center;
     padding: 0;
     
     line-height: 10px;
-    border-bottom: 1px solid rgb(235, 235, 15);
+    border-bottom: 0.5px solid BLACK;
     /* display: none; */
 }
 
