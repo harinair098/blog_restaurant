@@ -84,11 +84,12 @@ text-align: center;
 }
 .search-bar{    
     width: 60%;
-    margin: auto;
+    margin:0 auto;
     outline: transparent;
     margin-bottom: 2em;
     height: 10%;
-    background-color:seashell;
+    text-align: center;
+    background-color:#898989;
     font-size: large;
     border-radius: 2em;
 }
@@ -117,7 +118,7 @@ text-align: center;
     
 }
 .srch{
-    float: left;
+    float:left;
     align-items: center;
     justify-content: center;
     margin-top: 5px;
