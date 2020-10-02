@@ -9,51 +9,57 @@
         <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"   -->
         <!-- <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@40 0;700&display=swap" rel="stylesheet"> -->
        <link rel="stylesheet" type="text/css" href="/app.css"> 
-       <link rel="stylesheet" type="text/css" href="/landing.css">   
+       <!-- <link rel="stylesheet" type="text/css" href="/landing.css">    -->
         
     </head> 
     <body>
-        <nav class="navbar navbar-inverse ">
+        <nav class="navbar navbar-inverse pattern " style="background-color: transparent;border:none;margin: 0;">
             <div class="container ">
-                <div class="navbar-header">
+                <div class="navbar-header" >
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                       </button>
-                    <a class="navbar brand" href="/" style="color:lightyellow;"><i class="fa fa-cutlery" aria-hidden="true"></i>  FORKEd_IN</a>
+                    <a class="navbar brand" href="/" style="color:floralwhite;"><i class="fa fa-cutlery" aria-hidden="true" style="color: red;"></i>  FORKEd_IN</a>
                    
-                </div>
-                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="/feedback" style="font-size:medium;margin-top: 5px;">Feedback</a> </li>    
-                        <li> <a href="/restaurants"><i class="fa fa-home" aria-hidden="true" style="font-size: x-large;"></i></i></a></li>
+                </div >
+                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="color: floralwhite;">
+                     <div id="menu">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="/feedback" style="font-size:medium;margin-top: 5px;font-weight: 500;color:floralwhite;"          >Feedback</a></li> 
+                        <li > <a href="/restaurants"><i class="fa fa-home" aria-hidden="true" style="font-size: x-large;color:floralwhite;"></i></i></a></li>
                          <%if(!curentuser){%> 
-                             <li><a href="/login"><i class="fa fa-user" aria-hidden="true" style="font-size: x-large;"></i></a> </li>              
-                           <li><a href="/register"><i class="fa fa-user-plus" aria-hidden="true" style="font-size: x-large;"></i></a> </li>
+                             <li >
+                                <a href="/login">
+                                    <i class="fa fa-user"
+                                    aria-hidden="true" style="font-size: x-large;background-color: darkred;width: 1.3em;color:floralwhite;height:1.1em;text-align: center;border-radius: 0.3em;"></i></a></li>              
+                           <li ><a href="/register"><i class="fa fa-user-plus" aria-hidden="true" style="font-size: x-large;background-color: darkred;width: 1.8em;height:1.1em;text-align: center;color:floralwhite;border-radius: 0.4em;"></i></a> </li>
                          <%}else{%> 
-                            <li><a style="color: red;font-size:medium;margin-top: 5px;"><%=curentuser.username%></a></li>> 
+                            <li><a href="#" style="font-size:medium;margin-top: 5px;color: red;font-weight: 500;text-decoration: underline;"><%=curentuser.username%></a></li>
                            <li><a href="/logout" style="font-size:medium;margin-top: 5px;">Logout</a> </li> 
                          <%}%>            
                      </ul>
         
+                     </div>
                  </div>
             </div>
         </nav>
         <%if(error && error.length>0){%>
-            <div class="container">
-            <div class="alert alert-danger" role="alert">
+            <div class=" pattern" >
+            <div class="alert alert-danger pattern" role="alert">
                 <%=error%>
             </div>
             </div>
         <%}%>
         <%if(success && success.length>0){%>
-            <div class="container">
-                <div class="alert alert-success" role="alert">
-                    <%=success%>
+            <div class=" pattern">
+                <div class="alert alert-success pattern" style="margin: 0; border: none;" role="alert">
+                    <h4 style="background-color: green;width:max-content;margin: auto; text-align: center; border-radius: 0.3em;color: white;">
+                        <%=success%>
+                    </h4>
+                    
                 </div>
                 </div>
                 <%}%>
-
-        

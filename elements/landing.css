@@ -1,6 +1,10 @@
 body{
     color:darkred;
     background-color:#000;
+    /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTfTnJrjJPGthAUbLw_7i6_J8BeNng06OOUgQ&usqp=CAU"); */
+}
+a:active{
+    color: darkred;
 }
 #landing-header{
     z-index: 1;
@@ -15,6 +19,12 @@ body{
     border: none;
 
 }
+/* .pattern{
+    background-image: url("https://images.pexels.com/photos/172277/pexels-photo-172277.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
 h1{
     font-weight: bolder;
     font-size: 5em;
