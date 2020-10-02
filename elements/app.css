@@ -83,7 +83,7 @@ text-align: center;
     background-size: cover;
 }
 .search-bar{    
-    width: 60%;
+    width: 5    0%;
     margin:0 auto;
     outline: transparent;
     margin-bottom: 2em;
@@ -94,7 +94,7 @@ text-align: center;
     border-radius: 2em;
 }
 .search-bar input{
-    width:50%;
+    width:40%;
     background: transparent;
     height: 40px;
     border:none;
